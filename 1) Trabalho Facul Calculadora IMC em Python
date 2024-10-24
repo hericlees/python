@@ -1,0 +1,39 @@
+# Exibe uma mensagem de boas-vindas
+print("Bem-vindo à Calculadora de IMC!")
+
+# Pede ao usuário para inserir o nome e armazena a resposta em 'nome'
+nome = input("Qual é o seu nome?\n")
+print(f"Olá, {nome}!")
+
+# Pede ao usuário para inserir o peso em KG e converte para ponto flutuante, armazenando em 'peso'
+peso = float(input("\nQual é o seu peso (em KG)? "))
+
+# Pede ao usuário para inserir a altura em metros (usando ponto) e converte para ponto flutuante, armazenando em 'altura'
+altura = float(input("Qual é a sua altura (em metros, usando ponto)? "))
+
+# Exibe uma mensagem indicando que o IMC será calculado
+print("\nCalculando o seu IMC...")
+
+# Calcula o IMC usando a fórmula: IMC = peso / (altura * altura)
+imc = peso / (altura * altura)
+
+# Exibe o nome do usuário e seu IMC formatado com 2 casas decimais
+print(f"{nome}, seu IMC é: {imc:.2f}")
+
+# Com base no IMC calculado, fornece uma classificação de acordo com o estado de saúde
+if imc < 16:
+    print("\nSeu estado é de Magreza grave. Procure um médico ou nutricionista urgentemente!")
+elif imc < 17:
+    print("\nSeu estado é de Magreza moderada. Procure um médico ou nutricionista.")
+elif imc < 18.5:
+    print("\nSeu estado é de Magreza leve. Precisa rever sua alimentação.")
+elif imc < 25:
+    print("\nVocê está Saudável. Parabéns!")
+elif imc < 30:
+    print("\nSeu estado é de Sobrepeso. Precisa rever sua alimentação.")
+elif imc < 35:
+    print("\nSeu estado é de Obesidade Grau I. Procure um médico ou nutricionista.")
+elif imc < 40:
+    print("\nSeu estado é de Obesidade Grau II (Severa). Procure um médico ou nutricionista urgentemente!")
+else:
+    print("\nSeu estado é de Obesidade Grau III (Mórbida). Procure um médico ou nutricionista imediatamente!")
